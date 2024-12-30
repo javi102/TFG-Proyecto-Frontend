@@ -1,31 +1,22 @@
-<<<<<<< HEAD
 # LolChampions
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.0.
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-=======
 # TFG-Proyecto-Frontend
->>>>>>> e9009d42fb469b6caa39c5dbfd0e04d1bb7af3cd
+
+Una vez tengas los archivos de la carpeta scripts y los archivos de frontend y backend lee estas instrucciones: 
+
+1ºNecesitas tener node.js para poder instalar angular cli 16.2.12 
+2º instalar angular cli 16.2.12 // npm install -g @angular/cli16.2.12
+3º instalar xampp
+4º instalar dbeaver
+
+Importante en el proyecto debes seguir una serie de pasos para poder disfrutar de la página. Debes de importar lo siguiente en el orden que se te indica, además el backend debe de estar en funcionamiento o esto no funcionará: 
+1ºCrea una bd llamada lol_db
+2º localhost:3000/import-champions
+3º localhost:3000/import-stats2
+4º localhost:3000/import-items
+5º En la base de datos inserta los counter matchups, matchups y goodMatchups (script 2)
+6ºEn la base de datos abajo de la tabla de ítems hay un insert para meter las pociones insertalo te dará error la tabla  StarterItems (script 1)
+7ºInserta los CoreItems, ObjetosBuilds, StarterItems, Boots que están en la base de datos (script 3)
+
+Siguiendo estos pasos el proyecto funcionará a la perfección. 
