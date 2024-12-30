@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../assets/images/fondo.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.global {
+    position: fixed;
+    background-color: rgb(249, 249, 249);
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 400px;
+    padding: 50px;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+h2 {
+    text-align: center;
+    color: #000000;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.riot-games {
+    width: 250px;
+    height: 150px;
+    background-image: url('../../assets/images/riot_games.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    right: -30px;
+}
+
+.input {
+    display: block;
+    margin: 10px auto;
+    padding: 8px 12px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    width: 250px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    margin-left: 20px;
+}
+
+.input:focus {
+    border-color: #ff0000;
+    box-shadow: 0 0 8px rgba(255, 0, 0, 0.5);
+}
+
+label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+    text-align: left;
+    font-weight: bold;
+}
+
+.send {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 90px;
+    font-size: 30px;
+}
+
+.send:hover {
+    background-color: #b30000;
+}
+
+p {
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+p a {
+    color: black;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+.logo {
+    width: 200px;
+    height: 150px;
+    background-image: url('../../assets/images/logo.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    background-position: center;
+    top: 10px;
+    right: 20px;
+    z-index: 1;
+}

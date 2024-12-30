@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="contenedor">
+    <div class="build">
+      <h2>Tu Build ({{ build.length }}/12)</h2>
+      <div class="items-acumulados">
+        <img *ngFor="let item of build" [src]="item.image" [alt]="item.name" class="imagen-acumulada">
+      </div>
+      <button (click)="eliminarUltimoItem()" [disabled]="build.length === 0">Eliminar Último Ítem</button>
+      <button (click)="guardarBuild()" [disabled]="build.length === 0">Guardar build</button>
+  
+    </div>
+  
+    <div class="panel-items">
+      <div class="lista-items">
+        <h2>Starter Items</h2>
+        <div class="items">
+          <div *ngFor="let item of starterItems" 
+               (click)="agregarItem(item)" 
+               class="item" 
+               [attr.data-nombre]="item.name">
+            <img [src]="item.image" alt="{{ item.name }}">
+            <p class="item-precio">{{ item.total }} Gold</p>
+          </div>
+        </div>
+      </div>
+  
+      <div class="lista-items">
+        <h2>Basic Items</h2>
+        <div class="items">
+          <div *ngFor="let item of basicItems" 
+               (click)="agregarItem(item)" 
+               class="item" 
+               [attr.data-nombre]="item.name">
+            <img [src]="item.image" alt="{{ item.name }}">
+            <p class="item-precio">{{ item.total }} Gold</p>
+          </div>
+        </div>
+      </div>
+  
+      <div class="lista-items">
+        <h2>Boots Items</h2>
+        <div class="items">
+          <div *ngFor="let item of bootsItems" 
+               (click)="agregarItem(item)" 
+               class="item" 
+               [attr.data-nombre]="item.name">
+            <img [src]="item.image" alt="{{ item.name }}">
+            <p class="item-precio">{{ item.total }} Gold</p>
+          </div>
+        </div>
+      </div>
+  
+      <div class="lista-items">
+        <h2>Epic Items</h2>
+        <div class="items">
+          <div *ngFor="let item of epicItems" 
+               (click)="agregarItem(item)" 
+               class="item" 
+               [attr.data-nombre]="item.name">
+            <img [src]="item.image" alt="{{ item.name }}">
+            <p class="item-precio">{{ item.total }} Gold</p>
+          </div>
+        </div>
+      </div>
+  
+      <div class="lista-items">
+        <h2>Legendary Items</h2>
+        <div class="items">
+          <div *ngFor="let item of legendaryItems" 
+               (click)="agregarItem(item)" 
+               class="item" 
+               [attr.data-nombre]="item.name">
+            <img [src]="item.image" alt="{{ item.name }}">
+            <p class="item-precio">{{ item.total }} Gold</p>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  
+    <button class="boton-volver">
+      <a routerLink="/akali-builds" class="enlace-box">Volver</a>
+    </button>
+  </div>
+  
+</body>
+</html>

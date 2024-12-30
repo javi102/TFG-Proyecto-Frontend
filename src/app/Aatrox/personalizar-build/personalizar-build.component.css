@@ -1,0 +1,214 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(13, 13, 65);
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.contenedor {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 20px;
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.build {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  max-height: 500px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.build h2 {
+  color: #FFD700;
+  font-size: 1.2em;
+}
+
+.items-acumulados {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.imagen-acumulada {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  border: none;
+}
+
+.build button {
+  margin-top: 10px; 
+  margin-bottom: 0; 
+  padding: 15px 20px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.build button:first-of-type {
+  order: 1;
+  background-color: #e74c3c; 
+  box-shadow: none; 
+}
+
+.build button:first-of-type:hover {
+  background-color: #c0392b;
+  transform: scale(1.05);
+}
+
+.build button:first-of-type:active {
+  background-color: #a93226;
+  transform: scale(0.95);
+}
+
+/* Botón "Guardar build" */
+.build button:last-of-type {
+  order: 2;
+  background-color: #27ae60; 
+}
+
+.build button:last-of-type:hover {
+  background-color: #2ecc71;
+  transform: scale(1.05);
+}
+
+.build button:last-of-type:active {
+  background-color: #1e8449;
+  transform: scale(0.95);
+}
+
+
+/* Deshabilitado */
+button:disabled {
+  background-color: #555;
+  color: #aaa;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Panel de items a la derecha */
+.panel-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-height: 94vh;
+  overflow-y: auto;
+}
+
+.lista-items {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 8px;
+  padding: 15px;
+}
+
+.lista-items h2 {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #FFD700;
+}
+
+.items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr)); /*  Define columnas responsivas: se ajustan automáticamente al espacio disponible,
+                                                              con un ancho mínimo de 90px y un máximo que distribuye el espacio sobrante. */ 
+  gap: 15px;
+  justify-items: center;
+}
+
+.item {
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  padding: 5px;
+  border-radius: 8px;
+  transition: transform 0.2s ease, background-color 0.2s;
+}
+
+.item:hover {
+  transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.item img {
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+}
+
+.item-precio {
+  font-size: 0.8em;
+  color: #b3b3b3;
+}
+
+.item::after {
+  content: attr(data-nombre);
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 5px;
+  font-size: 0.8em;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+
+.item:hover::after {
+  opacity: 1;
+}
+
+.boton-volver {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #db1212;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 50px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+
+.boton-volver:hover {
+  background-color: #db1212;
+  transform: translateX(-50%) scale(1.1);
+  color: white;
+}
+
+.boton-volver:active {
+  background-color: #db1212;
+  color: white;
+}
+
+.boton-volver a {
+  text-decoration: none;
+  color: white;
+}

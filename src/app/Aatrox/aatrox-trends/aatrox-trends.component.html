@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Top Aatrox Win Rate and Pick Rate</title>
+</head>
+<body>
+
+  <div class="chart-container">
+    <h3>Superior Aatrox WinRate</h3>
+    <div class="chart-wrapper">
+      <canvas baseChart
+              [data]="winRateChartData"
+              [options]="winRateChartOptions"
+              [type]="winRateChartType">
+      </canvas>
+      <div class="chart-center-text">{{ winRateCenterText }}</div>
+    </div>
+  </div>
+  <div class="chart-container">
+    <h3>Superior Aatrox Pick Rate</h3>
+    <div class="chart-wrapper">
+      <canvas baseChart
+              [data]="pickRateChartData"
+              [options]="pickRateChartOptions"
+              [type]="pickRateChartType">
+      </canvas>
+      <div class="chart-center-text">{{ pickRateCenterText }}</div>
+    </div>
+  </div>
+  
+  <div class="chart-container">
+    <h3>Superior Aatrox Tasa/Ban</h3>
+    <div class="chart-wrapper">
+      <canvas baseChart
+              [data]="banRateChartData"
+              [options]="banRateChartOptions"
+              [type]="banRateChartType">
+      </canvas>
+      <div class="chart-center-text">{{ banRateCenterText }}</div>
+    </div>
+  </div>
+
+  <div class="chart-container">
+    <h3>Superior Aatrox Tasa de Victoria por la Duración de la Partida</h3>
+    <div class="chart-wrapper">
+      <canvas baseChart
+              [data]="winRateByDurationChartData"
+              [options]="winRateByDurationChartOptions"
+              [type]="winRateByDurationChartType">
+      </canvas>
+    </div>
+  </div>
+  
+  <img src="../../assets/images/fondosTrends.jpg" class="image1">
+  <img src="../../assets/images/fondosTrends.jpg" class="image2">
+
+
+
+  <button class="boton-volver" >
+    <a routerLink="/aatrox-stats" class="enlace-box">Volver</a>  
+</button>
+</body>
+</html>

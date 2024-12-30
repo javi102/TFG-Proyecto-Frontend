@@ -1,0 +1,146 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(13, 13, 65);
+  overflow-x: hidden;
+  overflow-y: auto; 
+  height: 100vh; 
+}
+
+.matchups-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 30px;
+  overflow-x: hidden; 
+}
+
+.matchup-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-x: hidden; 
+}
+
+h2 {
+  text-align: center;
+  font-size: 28px;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.matchup-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.matchup-item {
+  display: flex;
+  align-items: center;
+  background-color: #28286d;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, background-color 0.3s;
+  justify-content: space-around;
+  max-width: 600px;
+  margin: auto;
+}
+
+.matchup-character {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: none;
+}
+
+.matchup-item:hover {
+  background-color: #4444aa;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.character-image {
+  width: 90px;
+  height: 90px;
+}
+
+.character-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.winrate, .games {
+  font-size: 16px;
+  margin-top: 6px;
+  color: #ff4d4d;
+}
+
+.vs {
+  font-size: 24px;
+  font-weight: bold;
+  color: #4CAF50;
+}
+
+.image-container {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 33%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-container2 {
+  position: fixed; 
+  top: 0;
+  right: 0;
+  width: 34%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.image-container2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.boton-volver {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #db1212;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 50px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+
+.boton-volver:hover {
+  background-color: #db1212;
+  transform: translateX(-50%) scale(1.1);
+  color: white;
+}
+
+.boton-volver:active {
+  background-color: #db1212;
+  color: white;
+}
+
+.boton-volver a {
+  text-decoration: none;
+  color: white;
+}

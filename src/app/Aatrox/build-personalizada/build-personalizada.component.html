@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <div class="build-customization">
+    <div class="build-logOut">
+      <a routerLink="/register">
+        <button class="custom-button logOut-button">Log Out</button>
+      </a>
+    </div>
+  
+    <a routerLink="/personalizar-build">
+      <button class="custom-button">Personalizar Build</button>
+      </a>
+  </div>
+  
+
+  <button class="boton-volver">
+    <a routerLink="/aatrox-stats" class="enlace-box">Volver</a>
+  </button>
+
+  <div class="container">
+    <div class="table-container">
+      <table>
+        <tr>
+          <th>Item</th>
+          <th>Games</th>
+          <th>Winrate</th>
+          <th>Pickrate</th>
+        </tr>
+        <tr *ngFor="let item of Items; let i = index">
+          <td>
+            <div class="item-images-group">
+              <img [src]="ItemImages[i]" alt="Item {{i + 1}}" class="item-image">
+            </div>
+          </td>
+          <td>{{ item.games }}</td>
+          <td>{{ item.winRate }}%</td>
+          <td>{{ item.pickRate }}%</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="table-container">
+      <table>
+        <tr>
+          <th>Core Items</th>
+          <th>Games</th>
+          <th>Winrate</th>
+          <th>Pickrate</th>
+        </tr>
+        <tr *ngFor="let coreitems of coreItems; let i = index">
+          <td>
+            <div class="item-images-group">
+              <div *ngFor="let item of coreImages[i]; let j = index">
+                <img [src]="item" [alt]="'Item ' + (j + 1)" class="item-image">
+              </div>
+            </div>
+          </td>
+          <td>{{ coreitems.games }}</td>
+          <td>{{ coreitems.winRate }}%</td>
+          <td>{{ coreitems.pickRate }}%</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="table-container">
+      <table>
+        <tr>
+          <th>Item</th>
+          <th>Games</th>
+          <th>Winrate</th>
+          <th>Pickrate</th>
+        </tr>
+        <tr *ngFor="let boot of Boots; let i = index">
+          <td>
+            <div class="item-images-group">
+              <img [src]="boots[i]" alt="Item {{i + 1}}" class="item-image">
+            </div>
+          </td>
+          <td>{{ boot.games }}</td>
+          <td>{{ boot.winRate }}%</td>
+          <td>{{ boot.pickRate }}%</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="table-container">
+      <table>
+        <tr>
+          <th>Starter Item</th>
+          <th>Games</th>
+          <th>Winrate</th>
+          <th>Pickrate</th>
+        </tr>
+        <tr *ngFor="let starter of StarterItems; let i = index" >
+          <td>
+            <div class="item-images-group">
+              <img [src]="starterItems[i][0]" alt="Item 1" class="item-image">
+              <img [src]="starterItems[i][1]" alt="Item 2" class="item-image">
+              <img [src]="starterItems[i][2]" alt="Item 3" class="item-image">
+            </div>
+          </td>
+          <td>{{ starter.games }}</td>
+          <td>{{ starter.winRate }}%</td>
+          <td>{{ starter.pickRate }}%</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <h1>BUILD PERSONALIZADA</h1>
+  <table class="custom-table">
+    <thead>
+      <tr>
+        <th>Item</th>
+        <th>Name</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of builds">
+        <td><img [src]="item.item_image" class="item-image" /></td>
+        <td>{{ item.item_name }}</td>
+        <td>Precio: {{ item.item_price }}</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+   
+  
+</body>
+</html>

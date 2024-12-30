@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akali Skins</title>
+</head>
+<body>
+    <div class="skin-gallery">
+        <h2>Skins de Akali</h2>
+        <div class="skins">
+          <div
+            *ngFor="let skin of skins"
+            class="skin"
+            (click)="selectSkin(skin.url)"
+            [style.backgroundImage]="'url(' + skin.url + ')'"
+          >
+            <p>{{ skin.name }}</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="background" [ngStyle]="{'background-image': 'url(' + selectedSkin + ')'}"></div>
+      
+      <button class="boton-volver" >
+        <a routerLink="/akali-stats" class="enlace-box">Volver</a>  
+      </button>
+</body>
+</html>

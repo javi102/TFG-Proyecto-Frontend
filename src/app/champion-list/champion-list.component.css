@@ -1,0 +1,165 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: rgb(13, 13, 65);
+  overflow-x: hidden;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+  margin-top: 0vh;
+  justify-content: center; 
+}
+
+.card {
+  background-color: #2c2c54;
+  border-radius: 8px;
+  width: 275px; 
+  color: rgba(255, 255, 255, 0.945);
+  box-shadow: 0 4px 8px rgb(0, 0, 0);
+  margin-top: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+  .card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 16px;
+  }
+
+  .champion-image {
+    width: 50px; 
+    height: 50px; 
+    border-radius: 50%; 
+    margin-right: 16px;
+  }
+
+  .champion-info {
+    flex: 1;
+  }
+
+  .champion-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .champion-title {
+    font-size: 16px;
+    margin: 0;
+  }
+
+  .difficulty {
+    padding: 16px;
+    border-top: 1px solid #444;
+    text-align: center;
+  }
+
+  .difficulty-easy {
+    color: rgb(0, 255, 255); 
+  }
+
+  .difficulty-medium {
+    color: rgb(71, 199, 71);
+  }
+
+  .difficulty-intermidatte {
+    color: yellow;
+  }
+
+  .difficulty-Advanced {
+    color: #ff4400; 
+  }
+
+  .difficulty-expert {
+    color: rgb(196, 73, 196);
+  }
+
+  .roles {
+    display: flex; 
+    flex-direction: column; 
+    align-items: flex-end; 
+    gap: 4px; 
+  }
+
+  .champion-role {
+    width: 20px;
+    height: 20px;
+  }
+
+  .champion-midTop {
+    width: 20px;
+    height: 20px;
+  }
+  .search-filter-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #1c193a;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  
+  .search-input {
+    padding: 8px 12px;
+    font-size: 16px;
+    color: white;
+    background-color: #2f2a58;
+    border: 1px solid #49426c;
+    border-radius: 6px;
+    outline: none;
+    flex-grow: 1;
+    transition: all 0.3s ease;
+    width: 1200px;
+  }
+  
+  .search-input::placeholder {
+    color: #807da5;
+  }
+  
+  .search-input:focus {
+    border-color: #7859ff;
+  }
+  
+  .filtrado-botones {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .filtrado-boton {
+    background-color: transparent;
+    border: 1px solid #49426c;
+    border-radius: 6px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    justify-content: center;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .filtrado-boton img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .filtrado-boton.active {
+    border-color: #f9b234;
+    background-color: #2a2653;
+  }
+  
+  .filtrado-boton:hover {
+    background-color: #322d5c;
+    border-color: #7859ff;
+  }
+  
+  
+  

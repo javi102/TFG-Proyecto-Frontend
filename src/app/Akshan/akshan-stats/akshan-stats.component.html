@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div class="header-container">
+    <div class="top-left">
+      <img src="../../../assets/campeones/Akshan.png" class="champion-image">
+    </div>
+    <div class="top-right">{{ champions[3].name }}</div>
+  </div>
+  <div class="habilities">
+    <div class="hability-container" (mouseenter)="showVideo(passiveVideo)" (mouseleave)="hideVideo(passiveVideo)">
+      <img src="../../../assets/Akshan/akshan_p.png" class="hability-image">
+      <video #passiveVideo class="video-hover" src="../../../assets/Akshan/Videos/Akshan_Passive_Video.mp4" autoplay loop
+        [muted]="true">
+      </video>
+      <span class="keys-habilities">P</span>
+    </div>
+  
+    <div class="hability-container" (mouseenter)="showVideo(qVideo)" (mouseleave)="hideVideo(qVideo)">
+      <img src="../../../assets/Akshan/AkshanQ.png" class="hability-image">
+      <video #qVideo class="video-hoverq" src="../../../assets/Akshan/Videos/Akshan_Q_Video.mp4" autoplay loop
+        [muted]="true">
+      </video>
+      <span class="keys-habilities">Q</span>
+    </div>
+    <div class="hability-container" (mouseenter)="showVideo(wVideo)" (mouseleave)="hideVideo(wVideo)">
+      <img src="../../../assets/Akshan/AkshanW.png" class="hability-image">
+      <video #wVideo class="video-hoverw" src="../../../assets/Akshan/Videos/Akshan_W_Video.mp4" autoplay loop
+        [muted]="true">
+      </video>
+      <span class="keys-habilities">W</span>
+    </div>
+    <div class="hability-container" (mouseenter)="showVideo(eVideo)" (mouseleave)="hideVideo(eVideo)">
+      <img src="../../../assets/Akshan/AkshanE.png" class="hability-image">
+      <video #eVideo class="video-hovere" src="../../../assets/Akshan/Videos/Akshan_E_Video.mp4" autoplay loop
+        [muted]="true">
+      </video>
+      <span class="keys-habilities">E</span>
+    </div>
+    <div class="hability-container" (mouseenter)="showVideo(rVideo)" (mouseleave)="hideVideo(rVideo)">
+      <img src="../../../assets/Akshan/AkshanR.png" class="hability-image">
+      <video #rVideo class="video-hoverr" src="../../../assets/Akshan/Videos/Akshan_R_Video.mp4" autoplay loop
+        [muted]="true">
+      </video>
+      <span class="keys-habilities">R</span>
+    </div>
+  </div>
+
+  <div class="akshan-stats">
+    <div class="stats-group">
+      <div class="stat-container">
+        <img src="../../../assets/stats/attack.png" class="stat-image">
+        <span>{{champions[3].attack_damage}}</span>
+      </div>
+      <div class="stat-container">
+        <img src="../../../assets/stats/StatModsArmorIcon.png" class="stat-image">
+        <span>{{champions[3].armor}}</span>
+      </div>
+      <div class="stat-container">
+        <img src="../../../assets/stats/StatModsHealthScalingIcon.png" class="stat-image">
+        <span>{{champions[3].health}}</span>
+      </div>
+      <div class="stat-container">
+        <img src="../../../assets/stats/StatModsMovementSpeedIcon.png" class="stat-image">
+        <span>{{champions[3].speed}}</span>
+      </div>
+    </div>
+    <img src="../../../assets/Akshan/skins/Akshan_0.jpg" class="akshan-skin">
+  </div>
+
+  <div class="contenedor-runas">
+    <div class="runas-title">
+      <h2>Runas Recomendadas</h2>
+    </div>
+    <div class="runas">
+      <div class="runa-branch">
+        <img src="../../../assets/runas/7201_Precision.png" class="precision">
+        <h3>Precision</h3>
+        <div class="runa-precision">
+          <img src="../../../assets/runas/Precision/PressTheAttack/PressTheAttack.png" class="runa-image">
+          <img src="../../../assets/runas/Precision/LethalTempo/LethalTempoTemp.png" class="runa-apagada">
+          <img src="../../../assets/runas/Precision/FleetFootwork/FleetFootwork.png" class="runa-apagada">
+          <img src="../../../assets/runas/Precision/Conqueror/Conqueror.png" class="runa-apagada">
+        </div>
+
+        <div class="runa-precision">
+          <img src="../../../assets/runas/Precision/AbsorbLife/AbsorbLife.png" class="runa-apagada">
+          <img src="../../../assets/runas/Precision/Triumph.png" class="runa-apagada">
+          <img src="../../../assets/runas/Precision/PresenceOfMind/PresenceOfMind.png" class="runa-image">
+        </div>
+
+        <div class="runa-precision">
+          <img src="../../../assets/runas/Precision/LegendAlacrity/LegendAlacrity.png" class="runa-image">
+          <img src="../../../assets/runas/Precision/LegendHaste/LegendHaste.png" class="runa-apagada">
+          <img src="../../../assets/runas/Precision/LegendBloodline/LegendBloodline.png" class="runa-apagada">
+        </div>
+
+        <div class="runa-precision">
+          <img src="../../../assets/runas/Precision/CoupDeGrace/CoupDeGrace.png" class="runa-image">
+          <img src="../../../assets/runas/Precision/CutDown/CutDown.png" class="runa-apagada">
+          <img src="../../../assets/runas/last_Stand.png" class="runa-apagada">
+        </div>
+      </div>
+      <div class="runa-branch">
+        <img src="../../../assets/runas/7204_Resolve.png" class="resolve">
+        <h3>Resolve</h3>
+        <div class="runa-resolve">
+          <img src="../../../assets/runas/Resolve/Demolish/Demolish.png" class="runa-apagada">
+          <img src="../../../assets/runas/Resolve/FontOfLife/FontOfLife.png" class="runa-apagada">
+          <img src="../../../assets/runas/Resolve/MirrorShell/MirrorShell.png" class="runa-apagada">
+
+        </div>
+
+        <div class="runa-resolve">
+          <img src="../../../assets/runas/Resolve/Conditioning/Conditioning.png" class="runa-apagada">
+          <img src="../../../assets/runas/Resolve/SecondWind/SecondWind.png" class="runa-apagada">
+          <img src="../../../assets/runas/Resolve/BonePlating/BonePlating.png" class="runa-image">
+
+        </div>
+
+        <div class="runa-resolve">
+          <img src="../../../assets/runas/Resolve/Overgrowth/Overgrowth.png" class="runa-image">
+          <img src="../../../assets/runas/Resolve/Revitalize/Revitalize.png" class="runa-apagada">
+          <img src="../../../assets/runas/Unflinching_rune.png" class="runa-apagada">
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="division">
+  <div class="enlaces">
+    <a routerLink="/akshan-counters" class="enlace-box">Counters/Matchups</a>
+    <a routerLink="/akshan-trends" class="enlace-box">Trends</a>
+    <a routerLink="/akshan-builds" class="enlace-box">Build</a>
+    <a routerLink="/akshan-skins" class="enlace-box">Skins</a>
+  </div>
+
+  <hr>
+
+  <div class="weaknesst-champ">
+    <h3>Toughest Matchups</h3>
+    <div class="contenedor-campeones">
+      <div class="caja-campeon" *ngFor="let matchup of counterMatchups">
+        <img [src]="'../../assets/campeones/' + QuitarApostrofes(matchup.campeon) + '.png'" class="imagen-campeon" />
+        <div class="info-campeon">
+          <h3>{{ matchup.campeon }}</h3>
+          <p class="winrate">{{ matchup.winrate }}% Win Rate</p>
+          <p>{{ matchup.numero_partidas }} Matches</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <button class="boton-volver">
+    <a routerLink="/champions-list" >Volver</a>
+  </button>

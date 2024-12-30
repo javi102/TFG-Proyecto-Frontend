@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <div class="matchups-container">
+      
+    <div class="matchup-section">
+        <h2>Toughest Matchups</h2>
+        <div *ngIf="counterMatchups && counterMatchups.length > 0" class="matchup-list">
+            <div *ngFor="let matchup of counterMatchups" class="matchup-item">
+                <div class="matchup-character">
+                    <img class="character-image" src="../../assets/campeones/Teemo.png" >
+                </div>
+                <div class="vs"><span>VS</span></div>
+                <div class="matchup-character">
+                    <img [src]="'../../assets/campeones/' + QuitarApostrofes(matchup.campeon) + '.png'" class="character-image" alt="{{ matchup.campeon }}">
+                    <span class="winrate">Winrate: {{ matchup.winrate }}%</span>
+                    <span class="games">Games: {{ matchup.numero_partidas }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="matchup-section">
+        <h2>Counter Matchups</h2>
+        <div *ngIf="matchups && matchups.length > 0" class="matchup-list">
+          <div *ngFor="let matchup of matchups" class="matchup-item">
+            <div class="matchup-character">
+              <img class="character-image" src="../../assets/campeones/Teemo.png" >
+                  
+                </div>
+                <div class="vs"><span>VS</span></div>
+                <div class="matchup-character">
+                  <img [src]="'../../assets/campeones/' + QuitarApostrofes(matchup.campeon) + '.png'" class="character-image" alt="{{ matchup.campeon }}">
+                    <span class="winrate">Winrate: {{ matchup.winrate }}%</span>
+                    <span class="games">Games: {{ matchup.numero_partidas }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="matchup-section">
+        <h2>Good Matchups</h2>
+        <div *ngIf="goodMatchups && goodMatchups.length > 0" class="matchup-list">
+            <div *ngFor="let matchup of goodMatchups" class="matchup-item">
+                <div class="matchup-character">
+                  <img class="character-image" src="../../assets/campeones/Teemo.png" >
+                </div>
+                <div class="vs"><span>VS</span></div>
+                <div class="matchup-character">
+                    <img [src]="'../../assets/campeones/' + QuitarApostrofes(matchup.campeon) + '.png'" class="character-image" alt="{{ matchup.goodCharacterName }}">
+                    <span class="winrate">Winrate: {{ matchup.winrate }}%</span>
+                    <span class="games">Games: {{ matchup.numero_partidas }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+<div class="image-container">
+  <img src="../../../assets/images/imagenCountersBetterMatchup.jpg">
+</div>
+
+
+<div class="image-container2">
+  <img src="../../../assets/images/CounterMatchups.png">
+</div>
+
+<button class="boton-volver">
+  <a routerLink="/teemo-stats" class="enlace-box">Volver</a>
+</button>
+</body>
+</html>

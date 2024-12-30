@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Champion Card</title>
+</head>
+<body>
+  <div class="search-filter-container">
+    <form [formGroup]="searchForm">
+      <input type="text" placeholder="Search by champion" class="search-input" formControlName="search">
+    </form>  
+    <div class="filtrado-botones">
+      <button class="filtrado-boton" (click)="filterChampions('top')">
+        <img src="../../assets/images/topPos.png" alt="Top">
+      </button>
+      <button class="filtrado-boton" (click)="filterChampions('jungle')">
+        <img src="../../assets/images/junglePos.png" alt="Jungle">
+      </button>
+      <button class="filtrado-boton" (click)="filterChampions('mid')">
+        <img src="../../assets/images/MidPos.png" alt="Mid">
+      </button>
+      <button class="filtrado-boton" (click)="filterChampions('adc')">
+        <img src="../../assets/images/AdcPos.png" alt="ADC">
+      </button>
+      <button class="filtrado-boton" (click)="filterChampions('support')">
+        <img src="../../assets/images/SuppPos.png" alt="Support">
+      </button>
+
+      <button class="filtrado-boton" (click)="filterChampions('all')">
+        <img src="../../assets/images/Polivalente.png" alt="all">
+      </button>
+      
+    </div>
+  </div>
+  <div class="card-container">
+    <div *ngFor="let champion of champions; let i = index" class="card">
+      <div class="card-header">
+        <a [routerLink]="['/' + championRoutesMap[champion.name]]">
+          <img [src]="'assets/campeones/' + champion.name + '.png'" class="champion-image">
+        </a>
+        
+  
+        <div class="champion-info">
+            <h2 class="champion-name">{{ champion.name }}</h2>
+          <h3 class="champion-title">{{ champion.title }}</h3>
+        </div>
+      </div>
+      <div class="difficulty">
+        <span>Difficulty:</span>
+        <span [ngStyle]="{'color': getDifficultyColor(stats2[i]?.Difficulty)}">
+          {{ stats2[i]?.Difficulty }}
+        </span>
+      </div>
+    </div>
+  </div>
+  
+  
+</body>
+</html>
